@@ -5,10 +5,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -24,7 +24,7 @@
 
   # Use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
- 
+
   # Bluetooth
   hardware.bluetooth = {
     enable = true;
@@ -94,7 +94,7 @@
       epson-escpr2
       epsonscan2
       epson-201401w
-    ]; 
+    ];
   };
 
   # Enable sound with pipewire.
@@ -123,7 +123,10 @@
   users.users.dan = {
     isNormalUser = true;
     description = "dan";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
     packages = with pkgs; [
       ack
@@ -134,6 +137,7 @@
       ghostty
       gnome-disk-utility
       jq
+      nixfmt-rfc-style
       haruna
       kdePackages.kalk
       kdePackages.kpat
@@ -224,7 +228,10 @@
   nix = {
     settings = {
       auto-optimise-store = true;
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
     };
     gc = {
       automatic = true;
