@@ -1,5 +1,5 @@
 {
-  description = "Chromedome Flake";
+  description = "NixOS Flake Configuration";
 
   inputs = {
     # NixOS official package source, using the nixos-25.05 branch here
@@ -22,9 +22,7 @@
         modules = [
           # Import the NixOS Hardware config first, following modules can override
           nixos-hardware.nixosModules.framework-13-7040-amd
-          # Import the previous configuration.nix we used,
-          # so the old configuration file still takes effect
-          ./hosts/chromedome/configuration.nix
+          ./hosts/chromedome
         ];
       };
     };
