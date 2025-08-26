@@ -8,7 +8,6 @@
     gnome-disk-utility
     keepassxc
     libreoffice
-    vlc
     vscodium
     wl-clipboard
   ];
