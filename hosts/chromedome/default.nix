@@ -16,9 +16,6 @@
   '';
   # End Mediatek wifi fixes
 
-  # Use latest kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   # Bluetooth
   hardware.bluetooth = {
     enable = true;
