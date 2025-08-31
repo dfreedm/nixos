@@ -8,17 +8,15 @@
   programs.nix-ld.enable = true;
 
   # System packages
-  environment = {
-    systemPackages = with pkgs; [
-      acpi
-      curl
-      lm_sensors
-      nvme-cli
-      smartmontools
-      vim
-      wget
-    ];
-  };
+  environment.systemPackages = with pkgs; [
+    acpi
+    curl
+    lm_sensors
+    nvme-cli
+    smartmontools
+    vim
+    wget
+  ];
 
   # Common user packages
   users.users.dan.packages = with pkgs; [
