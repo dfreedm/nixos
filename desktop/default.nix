@@ -1,8 +1,9 @@
 { ... }:
 {
   imports = [
-    (import ./audio.nix)
+    (import ../common)
   ]
+  ++ [ (import ./audio.nix) ]
   ++ [ (import ./boot.nix) ]
   ++ [ (import ./printing.nix) ]
   ++ [ (import ./fonts.nix) ]
