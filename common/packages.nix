@@ -25,9 +25,13 @@
     fastfetch
     jq
     nixfmt-rfc-style
+    p7zip
     python3
+    rar
     tig
+    unzip
     yt-dlp
+    zip
   ];
 
 }
