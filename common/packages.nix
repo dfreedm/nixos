@@ -23,6 +23,7 @@
     ack
     btop
     fastfetch
+    htop
     jq
     nixfmt-rfc-style
     p7zip
