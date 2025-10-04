@@ -26,6 +26,7 @@
     htop
     jq
     nixfmt-rfc-style
+    nvd
     p7zip
     python3
     rar
