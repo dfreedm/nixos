@@ -14,7 +14,7 @@
     lm_sensors
     nvme-cli
     smartmontools
-    vim
+    vim-full
     wget
   ];
 
@@ -35,5 +35,9 @@
     yt-dlp
     zip
   ];
+
+  # Editor session variables
+  environment.sessionVariables.EDITOR = "vim";
+  environment.sessionVariables.VISUAL = "gvim -f";
 
 }
