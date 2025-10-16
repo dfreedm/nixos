@@ -42,10 +42,8 @@
   users.users.dan.packages = with pkgs; [
     nvtopPackages.amd
     signal-desktop
+    zoom-us
   ];
-
-  # Flatpak for Zoom, because NixOS zoom bluetooth is wonky
-  services.flatpak.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
