@@ -23,6 +23,7 @@
     ack
     btop
     fastfetch
+    ffmpeg
     htop
     jq
     nixfmt-rfc-style
