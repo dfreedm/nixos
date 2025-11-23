@@ -4,6 +4,7 @@
   users.users.dan.packages = with pkgs; [
     calibre
     dropbox
+    fooyin
     ghostty
     gnome-disk-utility
     keepassxc
