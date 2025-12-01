@@ -6,7 +6,7 @@
     packages = with pkgs; [
       powerline-fonts
       google-fonts
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       source-code-pro
     ];
     fontconfig = {
