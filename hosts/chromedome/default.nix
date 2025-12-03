@@ -15,12 +15,6 @@
   '';
   # End Mediatek wifi fixes
 
-  # Bluetooth
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-
   # Enable light sensor
   hardware.sensor.iio.enable = true;
 
@@ -58,4 +52,7 @@
 
   # Enable firmware updates
   services.fwupd.enable = true;
+
+  # Set scaling to 2x for QT apps that don't understand autoscaling
+  environment.sessionVariables.QT_SCALE_FACTOR = "2";
 }

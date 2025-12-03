@@ -4,6 +4,7 @@
   ]
   ++ [ (import ./audio.nix) ]
   ++ [ (import ./boot.nix) ]
+  ++ [ (import ./bluetooth.nix) ]
   ++ [ (import ./printing.nix) ]
   ++ [ (import ./fonts.nix) ]
   ++ [ (import ./kde.nix) ]
