@@ -53,6 +53,4 @@
   # Enable firmware updates
   services.fwupd.enable = true;
 
-  # Set scaling to 2x for QT apps that don't understand autoscaling
-  environment.sessionVariables.QT_SCALE_FACTOR = "2";
 }
