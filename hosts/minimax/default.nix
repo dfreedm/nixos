@@ -17,6 +17,9 @@
 
   # Enable firmware updates
   services.fwupd.enable = true;
+  # Enable fstrim
+  services.fstrim.enable = true;
 
   system.stateVersion = "25.11";
+
 }
