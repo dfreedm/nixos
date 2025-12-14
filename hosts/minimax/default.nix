@@ -12,6 +12,7 @@
   # Specific packages for this machine
   users.users.dan.packages = with pkgs; [
     discord
+    heroic
     nvtopPackages.amd
   ];
 
@@ -19,6 +20,10 @@
   services.fwupd.enable = true;
   # Enable fstrim
   services.fstrim.enable = true;
+
+  # Power stuff
+  powerManagement.powertop.enable = true;
+  services.power-profiles-daemon.enable = true;
 
   system.stateVersion = "25.11";
 
