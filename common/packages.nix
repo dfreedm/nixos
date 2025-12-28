@@ -22,9 +22,7 @@
   users.users.dan.packages = with pkgs; [
     ack
     btop
-    fastfetch
     ffmpeg
-    jq
     nixfmt-rfc-style
     nvd
     p7zip
