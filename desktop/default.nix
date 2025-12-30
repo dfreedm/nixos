@@ -3,7 +3,6 @@
     (import ../common)
   ]
   ++ [ (import ./audio.nix) ]
-  ++ [ (import ./boot.nix) ]
   ++ [ (import ./bluetooth.nix) ]
   ++ [ (import ./printing.nix) ]
   ++ [ (import ./fonts.nix) ]

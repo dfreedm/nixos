@@ -1,5 +1,6 @@
 {
   services.tailscale.enable = true;
+  # mDNS
   services.avahi = {
     enable = true;
     nssmdns4 = true;

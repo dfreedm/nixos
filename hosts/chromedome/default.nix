@@ -20,12 +20,6 @@
 
   networking.hostName = "chromedome"; # Define your hostname.
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   # PPD for AMD cpus
   services.power-profiles-daemon.enable = true;
 

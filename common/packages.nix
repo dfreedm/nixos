@@ -11,9 +11,12 @@
   environment.systemPackages = with pkgs; [
     acpi
     curl
+    dmidecode
     lm_sensors
     nvme-cli
+    pciutils
     smartmontools
+    usbutils
     vim-full
     wget
   ];
@@ -37,5 +40,4 @@
   # Editor session variables
   environment.sessionVariables.EDITOR = "vim";
   environment.sessionVariables.VISUAL = "gvim -f";
-
 }
