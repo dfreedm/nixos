@@ -16,15 +16,8 @@
     nvtopPackages.amd
   ];
 
-  # Enable firmware updates
-  services.fwupd.enable = true;
-  # Enable fstrim
-  services.fstrim.enable = true;
-
-  # Power stuff
-  powerManagement.powertop.enable = true;
+  # PPD for AMD CPUs
   services.power-profiles-daemon.enable = true;
 
   system.stateVersion = "25.11";
-
 }

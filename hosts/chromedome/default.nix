@@ -29,9 +29,6 @@
   # PPD for AMD cpus
   services.power-profiles-daemon.enable = true;
 
-  # Powertop runs once to lower overall energy use
-  powerManagement.powertop.enable = true;
-
   # Specific packages for this machine
   users.users.dan.packages = with pkgs; [
     nvtopPackages.amd
@@ -49,8 +46,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
-  # Enable firmware updates
-  services.fwupd.enable = true;
-
 }
