@@ -16,11 +16,9 @@
       ...
     }@inputs:
     {
-      # Please replace my-nixos with your hostname
       nixosConfigurations.chromedome = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          # Import the NixOS Hardware config first, following modules can override
           nixos-hardware.nixosModules.framework-13-7040-amd
           ./hosts/chromedome
         ];
