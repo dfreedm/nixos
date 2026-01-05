@@ -31,5 +31,11 @@
           ./hosts/minimax
         ];
       };
+      nixosConfigurations.sixer = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/sixer
+        ];
+      };
     };
 }
