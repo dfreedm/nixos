@@ -15,5 +15,8 @@
   # Enable trim
   services.fstrim.enable = true;
 
+  # Enable tailscale exit node
+  services.tailscale.useRoutingFeatures = "both";
+
   system.stateVersion = "25.11";
 }
