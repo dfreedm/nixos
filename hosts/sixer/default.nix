@@ -12,5 +12,8 @@
   # Enable System76 kernel modules, power daemon, and firmware daemon
   hardware.system76.enableAll = true;
 
+  # Enable trim
+  services.fstrim.enable = true;
+
   system.stateVersion = "25.11";
 }
