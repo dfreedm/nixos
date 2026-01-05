@@ -12,8 +12,11 @@
   # Specific packages for this machine
   users.users.dan.packages = with pkgs; [
     discord
+    # Non steam games
     heroic
     nvtopPackages.amd
+    # Game mod manager
+    r2modman
   ];
 
   # PPD for AMD CPUs

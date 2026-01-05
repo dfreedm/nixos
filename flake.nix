@@ -26,6 +26,7 @@
       nixosConfigurations.minimax = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          nixos-hardware.nixosModules.common-cpu-amd
           nixos-hardware.nixosModules.common-cpu-amd-pstate
           nixos-hardware.nixosModules.common-gpu-amd
           ./hosts/minimax
