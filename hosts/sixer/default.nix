@@ -2,7 +2,7 @@
 {
   imports = [
     (import ../../server)
-    (import ../graphics.nix)
+    (import ./graphics.nix)
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
