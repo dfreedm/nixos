@@ -22,8 +22,13 @@
   # Enable tailscale exit node
   services.tailscale.useRoutingFeatures = "both";
 
-  # Disable sleep on lid close
-  services.logind.settings.Login.HandleLidSwitch = "ignore";
+  # Disable sleep entirely
+  systemd.sleep.extraConfig = ''
+    AllowSuspend=no
+    AllowHibernation=no
+    AllowHybridSleep=no
+    AllowSuspendThenHibernate=no
+  '';
 
   system.stateVersion = "25.11";
 }
