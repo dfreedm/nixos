@@ -2,6 +2,7 @@
 {
   imports = [
     (import ../../server)
+    (import ./nas.nix)
     (import ./graphics.nix)
     (import ./home-assistant.nix)
     # Include the results of the hardware scan.

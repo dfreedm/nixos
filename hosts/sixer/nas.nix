@@ -1,35 +1,24 @@
+{ pkgs, ... }:
 {
   services.samba = {
     enable = true;
+    # Required for auto discovery
+    package = pkgs.samba4Full;
     securityType = "user";
     openFirewall = true;
-    settings = {
-      global = {
-        "workgroup" = "WORKGROUP";
-        "server string" = "smbnix";
-        "netbios name" = "smbnix";
-        "security" = "user";
-        #"use sendfile" = "yes";
-        #"max protocol" = "smb2";
-        # note: localhost is the ipv6 localhost ::1
-        # "hosts allow" = "192.168.0. 127.0.0.1 localhost";
-        # "hosts deny" = "0.0.0.0/0";
-        "guest account" = "nobody";
-        "map to guest" = "bad user";
-      };
-      "public" = {
-        "path" = "/mnt/nas/samba";
-        "browseable" = "yes";
-        "read only" = "no";
-        "guest ok" = "yes";
-        "create mask" = "0700";
-        "directory mask" = "0700";
-        # "force user" = "username";
-        # "force group" = "groupname";
-      };
+    shares.public = {
+      path = "/mnt/nas/samba";
+      writable = "true";
     };
   };
 
+  # Turn on discovery over mDNS
+  services.avahi.publish = {
+    enable = true;
+    userServices = true;
+  };
+
+  # Discovery for Windows
   services.samba-wsdd = {
     enable = true;
     openFirewall = true;
@@ -46,7 +35,4 @@
   fileSystems."/mnt/nas" = {
     device = "/dev/md127";
   };
-
-  # networking.firewall.enable = true;
-  # networking.firewall.allowPing = true;
 }
