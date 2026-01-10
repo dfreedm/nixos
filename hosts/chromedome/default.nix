@@ -7,9 +7,10 @@
     ./hardware-configuration.nix
   ];
 
+  networking.hostName = "chromedome";
+
   # Fixes for Mediatek wifi cards on F13/F16:. Without the following,
   # Mediatek cards have been limited to 802.11n networks & speeds:
-  hardware.wirelessRegulatoryDatabase = true;
   boot.extraModprobeConfig = ''
     options cfg80211 ieee80211_regdom="US"
   '';
@@ -17,8 +18,6 @@
 
   # Enable light sensor
   hardware.sensor.iio.enable = true;
-
-  networking.hostName = "chromedome"; # Define your hostname.
 
   # PPD for AMD cpus
   services.power-profiles-daemon.enable = true;

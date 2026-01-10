@@ -11,9 +11,6 @@
     ];
   };
 
-  # Enable linger so the container can run without user login
-  users.users.dan.linger = true;
-
   # Open firewall
   networking.firewall.allowedTCPPorts = [ 8123 ];
 }

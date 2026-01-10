@@ -6,8 +6,9 @@
     ./hardware-configuration.nix
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.hostName = "minimax";
+  
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Specific packages for this machine
   users.users.dan.packages = with pkgs; [
