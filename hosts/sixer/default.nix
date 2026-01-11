@@ -2,6 +2,7 @@
 {
   imports = [
     (import ../../server)
+    (import ./raid-array.nix)
     (import ./nas.nix)
     (import ./graphics.nix)
     (import ./home-assistant.nix)

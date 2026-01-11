@@ -24,15 +24,5 @@
     openFirewall = true;
   };
 
-  # Enable MDADM
-  boot.swraid = {
-    enable = true;
-    mdadmConf = ''
-      ARRAY /dev/md/nas  metadata=1.2 UUID=c885239d:c517b217:6a68428c:da2acecc name=pumpkin:nas
-    '';
-  };
-
-  fileSystems."/mnt/nas" = {
-    device = "/dev/md127";
-  };
+  users.users."dan".extraGroups = [ "samba" ];
 }
