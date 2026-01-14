@@ -23,5 +23,11 @@
   # PPD for AMD CPUs
   services.power-profiles-daemon.enable = true;
 
+  # Enable UI for Logitech mouse
+  hardware.logitech.wireless = {
+    enable = true;
+    enableGraphical = true;
+  };
+
   system.stateVersion = "25.11";
 }
