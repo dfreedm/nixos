@@ -24,6 +24,7 @@
 
   # Specific packages for this machine
   users.users.dan.packages = with pkgs; [
+    easyeffects
     nvtopPackages.amd
     signal-desktop
     zoom-us
