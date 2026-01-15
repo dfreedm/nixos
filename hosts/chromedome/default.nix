@@ -16,9 +16,6 @@
   '';
   # End Mediatek wifi fixes
 
-  # Enable light sensor
-  hardware.sensor.iio.enable = true;
-
   # PPD for AMD cpus
   services.power-profiles-daemon.enable = true;
 
