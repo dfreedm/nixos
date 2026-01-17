@@ -26,9 +26,6 @@
     zoom-us
   ];
 
-  # Use the nixos-hardware audio enhancements
-  hardware.framework.laptop13.audioEnhancement.enable = true;
-
   # Use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
