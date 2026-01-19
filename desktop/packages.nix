@@ -9,6 +9,7 @@
     keepassxc
     libreoffice
     strawberry
+    vlc
     vscodium
     wl-clipboard
   ];

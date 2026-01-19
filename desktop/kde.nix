@@ -7,7 +7,6 @@
 
   # KDE specific packages
   users.users.dan.packages = with pkgs; [
-    haruna # KDE gui for mpv
     kdePackages.kalk # Calculator
     kdePackages.kpat # Solitare
   ];
