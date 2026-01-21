@@ -26,6 +26,9 @@
     zoom-us
   ];
 
+  # qFlipper app and udev rules
+  hardware.flipperzero.enable = true;
+
   # Use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
