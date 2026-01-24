@@ -6,10 +6,10 @@
     dropbox
     ghostty
     gnome-disk-utility
+    haruna
     keepassxc
     libreoffice
     strawberry
-    vlc
     vscodium
     wl-clipboard
   ];
