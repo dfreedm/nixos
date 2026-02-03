@@ -7,6 +7,10 @@
         "nix-command"
         "flakes"
       ];
+      trusted-users = [
+        "root"
+        "dan"
+      ];
     };
     gc = {
       automatic = true;
