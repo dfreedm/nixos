@@ -26,7 +26,7 @@
     ack
     btop
     ffmpeg
-    nixfmt-rfc-style
+    nixfmt
     nvd
     p7zip
     python3
