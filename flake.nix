@@ -7,7 +7,7 @@
     # NixOS unstable
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     # NixOS Hardware configuration source
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
   };
 
   outputs =
@@ -26,7 +26,7 @@
           ./hosts/chromedome
         ];
       };
-      nixosConfigurations.minimax = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.minimax = nixpkgs-unstable.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           nixos-hardware.nixosModules.common-cpu-amd
