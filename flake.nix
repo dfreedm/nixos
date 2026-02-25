@@ -4,8 +4,6 @@
   inputs = {
     # NixOS official package source, using the nixos-25.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-    # NixOS unstable
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     # NixOS Hardware configuration source
     nixos-hardware.url = "github:NixOS/nixos-hardware";
   };
@@ -14,19 +12,18 @@
     {
       self,
       nixpkgs,
-      nixpkgs-unstable,
       nixos-hardware,
       ...
     }@inputs:
     {
-      nixosConfigurations.chromedome = nixpkgs-unstable.lib.nixosSystem {
+      nixosConfigurations.chromedome = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           nixos-hardware.nixosModules.framework-13-7040-amd
           ./hosts/chromedome
         ];
       };
-      nixosConfigurations.minimax = nixpkgs-unstable.lib.nixosSystem {
+      nixosConfigurations.minimax = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           nixos-hardware.nixosModules.common-cpu-amd
