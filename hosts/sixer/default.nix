@@ -6,6 +6,7 @@
     (import ./nas.nix)
     (import ./graphics.nix)
     (import ./home-assistant.nix)
+    (import ./ups.nix)
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
