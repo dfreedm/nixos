@@ -13,6 +13,7 @@
     curl
     dmidecode
     lm_sensors
+    lsof
     nvme-cli
     pciutils
     smartmontools
