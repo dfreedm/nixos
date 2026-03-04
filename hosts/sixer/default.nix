@@ -27,8 +27,11 @@
     AllowSuspend=no
     AllowHibernation=no
     AllowHybridSleep=no
-    AllowSuspendThenHibernate=no
   '';
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchDocked = "ignore";
+  };
 
   system.stateVersion = "25.11";
 }
