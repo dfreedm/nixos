@@ -22,6 +22,7 @@
   # Specific packages for this machine
   users.users.dan.packages = with pkgs; [
     nvtopPackages.amd
+    obsidian
     signal-desktop
     zoom-us
   ];

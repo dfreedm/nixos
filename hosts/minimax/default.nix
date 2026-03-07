@@ -16,6 +16,8 @@
     # Non steam games
     heroic
     nvtopPackages.amd
+    # Notes app
+    obsidian
     # Game mod manager
     r2modman
   ];
