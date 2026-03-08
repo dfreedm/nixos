@@ -7,7 +7,7 @@
     securityType = "user";
     openFirewall = true;
     shares.public = {
-      path = "/mnt/nas/samba";
+      path = "/mnt/data/samba";
       writable = "true";
     };
   };
