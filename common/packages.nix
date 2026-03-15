@@ -12,6 +12,7 @@
     acpi
     curl
     dmidecode
+    file
     lm_sensors
     lsof
     nvme-cli

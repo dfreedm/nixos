@@ -9,10 +9,12 @@
 
   networking.hostName = "chromedome";
 
-  # Fixes for Mediatek wifi cards on F13/F16:. Without the following,
-  # Mediatek cards have been limited to 802.11n networks & speeds:
+  # Fixes for Mediatek wifi cards on F13/F16:
+  # - Set regdom to get above 802.11n networks & speeds
+  # - Disable ASPM, card gets flaky when it is enabled
   boot.extraModprobeConfig = ''
     options cfg80211 ieee80211_regdom="US"
+    options mt7921e disable_aspm=1
   '';
   # End Mediatek wifi fixes
 
