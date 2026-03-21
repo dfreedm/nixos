@@ -2,6 +2,7 @@
 {
   imports = [
     (import ../../desktop)
+    (import ../../destkop/steam.nix)
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
