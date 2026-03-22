@@ -23,7 +23,7 @@
 
   # Specific packages for this machine
   users.users.dan.packages = with pkgs; [
-    nvtopPackages.amd
+    lutris
     obsidian
     signal-desktop
     zoom-us
@@ -34,6 +34,15 @@
 
   # Use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # Enable TRIM on the encrypted partitions
+  environment.etc."lvm/lvm.conf".text = ''
+    devices {
+      issue_discards = 1
+    }
+  '';
+
+  boot.initrd.luks.devices."luks-204092ca-f80c-41ef-b63f-fd5d419e280c".allowDiscards = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
