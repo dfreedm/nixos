@@ -2,13 +2,13 @@
 {
   imports = [
     (import ../../desktop)
-    (import ../../destkop/steam.nix)
+    (import ../../desktop/steam.nix)
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
 
   networking.hostName = "minimax";
-  
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Specific packages for this machine
